@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: SimpleZuulClient
+
+server:
+  port: 8769
+security:
+  user:
+    name: zuulclient
+    password: zuulclient
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:eureka@192.168.1.7:8761/eureka/,http://eureka:eureka@192.168.1.21:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.1.7
+zuul:
+  routes:
+    gateway:
+      path: /**
+      service-id: SIMPLEZUUL
+      
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 1
+  ServerListRefreshInterval: 1000
