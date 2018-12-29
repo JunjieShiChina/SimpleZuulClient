@@ -3,7 +3,7 @@ spring:
     name: SimpleZuulClient
 
 server:
-  port: 8769
+  port: 8770
 security:
   user:
     name: zuulclient

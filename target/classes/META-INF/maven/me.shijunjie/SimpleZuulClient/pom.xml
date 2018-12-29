@@ -67,7 +67,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>SimpleZuul</finalName>
+		<finalName>SimpleZuulClient</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
